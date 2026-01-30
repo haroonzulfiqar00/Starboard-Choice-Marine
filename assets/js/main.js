@@ -1,0 +1,165 @@
+$(document).ready(function() {
+    
+    // Initialize Owl Carousel
+    if ($('#servicesCarousel').length) {
+        $('#servicesCarousel').owlCarousel({
+            loop: true,
+            margin: 30,
+            nav: false,
+            dots: true,
+            autoplay: true,
+            autoplayTimeout: 5000,
+            responsive: {
+                0: { items: 1 },
+                768: { items: 2 },
+                1000: { items: 3 }
+            }
+        });
+    }
+
+    if ($('.testimonial-carousel').length) {
+        var testimonialOwl = $('.testimonial-carousel').owlCarousel({
+            loop: true,
+            margin: 30,
+            nav: false,
+            dots: true,
+            items: 1,
+            autoplay: true,
+            autoplayTimeout: 6000,
+            smartSpeed: 800
+        });
+
+        // Custom Navigation Events
+        $('.testimonial-prev').click(function() {
+            testimonialOwl.trigger('prev.owl.carousel');
+        });
+        $('.testimonial-next').click(function() {
+            testimonialOwl.trigger('next.owl.carousel');
+        });
+    }
+
+
+    // Initialize intl-tel-input
+    const phoneInput = document.querySelector("#phone");
+    if (phoneInput) {
+        window.intlTelInput(phoneInput, {
+            initialCountry: "auto",
+            geoIpLookup: function(success, failure) {
+                $.get("https://ipinfo.io", function() {}, "jsonp").always(function(resp) {
+                    var countryCode = (resp && resp.country) ? resp.country : "us";
+                    success(countryCode);
+                });
+            },
+            utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
+        });
+    }
+
+    // Example Slick Slider initialization (if any element exists)
+    // $('.slick-slider').slick({
+    //     dots: true,
+    //     infinite: true,
+    //     speed: 300,
+    //     slidesToShow: 1
+    // });
+
+    // Fancybox initialization
+    $('[data-fancybox]').fancybox({
+        buttons: [
+            "zoom",
+            "share",
+            "slideShow",
+            "fullScreen",
+            "download",
+            "thumbs",
+            "close"
+        ],
+    });
+
+    // jQuery UI Datepicker example
+    if ($('.datepicker').length) {
+        $('.datepicker').datepicker();
+    }
+
+    // Navbar scroll effect
+    // $(window).scroll(function() {
+    //     if ($(window).scrollTop() > 50) {
+    //         $('.main-header').addClass('scrolled shadow-lg');
+    //     } else {
+    //         $('.main-header').removeClass('scrolled shadow-lg');
+    //     }
+    // });
+
+
+    // Navigation Logic
+    
+    // Toggle Mega Menus
+    $('.mega-trigger').on('click', function(e) {
+        e.preventDefault();
+        const target = $(this).data('target');
+        const isActive = $(target).hasClass('active');
+
+        // Close all mega menus first
+        $('.mega-menu').not(target).removeClass('active');
+        $('.mega-trigger').not(this).find('i').removeClass('fa-chevron-up').addClass('fa-chevron-down');
+
+        // Toggle the target
+        $(target).toggleClass('active');
+        $(this).find('i').toggleClass('fa-chevron-down fa-chevron-up');
+
+        // Add class to header when any mega menu is active
+        if ($('.mega-menu.active').length > 0) {
+            $('.main-header').addClass('mega-active');
+        } else {
+            $('.main-header').removeClass('mega-active');
+        }
+    });
+
+    // Close Mega Menu when clicking outside
+    $(document).on('click', function(e) {
+        if (!$(e.target).closest('.has-mega, .mega-menu').length) {
+            $('.mega-menu').removeClass('active');
+            $('.mega-trigger i').removeClass('fa-chevron-up').addClass('fa-chevron-down');
+            $('.main-header').removeClass('mega-active');
+        }
+    });
+
+    // Sidebar / Company Toggle
+    $('#company-btn, .close-sidebar, .sidebar-overlay').on('click', function(e) {
+        if ($(window).width() < 992) {
+            // Mobile: Toggle full nav
+            $('#mobile-nav, .sidebar-overlay').toggleClass('active');
+        } else {
+            // Desktop: Toggle company sidebar
+            $('#menu-company, .sidebar-overlay').toggleClass('active');
+        }
+        $('body').toggleClass('overflow-hidden');
+    });
+
+
+    // Mobile Accordion
+    $('.accordion-header').on('click', function() {
+        const target = $(this).data('target');
+        $(target).slideToggle();
+        $(this).find('i').toggleClass('fa-plus fa-minus');
+    });
+
+    // Footer Accordion (Mobile)
+    $('.footer-accordion-toggle').on('click', function() {
+        if ($(window).width() < 992) {
+            const $list = $(this).next('.footer-nav-list');
+            const $icon = $(this).find('i');
+            
+            $list.slideToggle(300);
+            
+            // Toggle plus/minus icon
+            if ($icon.hasClass('fa-plus')) {
+                $icon.removeClass('fa-plus').addClass('fa-minus');
+            } else {
+                $icon.removeClass('fa-minus').addClass('fa-plus');
+            }
+        }
+    });
+
+    console.log("Starboard Choice Marine Template Initialized!");
+});
+
