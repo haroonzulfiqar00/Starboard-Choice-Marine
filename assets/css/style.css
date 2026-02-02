@@ -10,6 +10,7 @@
   --Black: #000000;
   --Light-Gray---D9: #d9d9d9;
   --Lightest-Gray---FA: #fafafa;
+  --Lighter-Gray---EE: #eeeeee;
   --text-muted: #a0a0a0;
   --glass-border: rgba(255, 255, 255, 0.1);
   --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -374,8 +375,8 @@
   background-color: var(--Lightest-Gray---FA);
   color: var(--Teal);
   font-family: "DM Sans", sans-serif;
-  border-top: 1px solid var(--Light-Gray---D9);
-  border-bottom: 1px solid var(--Light-Gray---D9);
+  border-top: 1px solid var(--Lighter-Gray---EE);
+  border-bottom: 1px solid var(--Lighter-Gray---EE);
 }
 
 /* Newsletter Bar */
@@ -1543,21 +1544,21 @@ body {
   color: rgba(0, 0, 0, 0.6);
 }
 
-.Starboard-storage-item{
-    display: flex;
+.Starboard-storage-item {
+  display: flex;
 }
-.Starboard-storage-item .services-item-text{
-    max-width: 85%;
+.Starboard-storage-item .services-item-text {
+  max-width: 85%;
 }
-.left-centsec{
+.left-centsec {
   text-align: center;
 }
-.left-centsec .about-title{
+.left-centsec .about-title {
   text-align: center;
-  font-family: 'Syncopate';
+  font-family: "Syncopate";
   letter-spacing: 9.6px;
 }
-.moreinfo p a{
+.moreinfo p a {
   color: var(--Black);
 }
 /* ==========================================================================
@@ -1574,7 +1575,7 @@ body {
 /* Small Desktops & Tablets */
 @media (max-width: 991.98px) {
   .section-title-alt {
-    font-size: 14px;
+    font-size: 18px;
     letter-spacing: 4px;
   }
   .feature-card {
@@ -1768,11 +1769,175 @@ body {
     font-size: 14px;
   }
   .section-title-alt {
-    font-size: 18px;
+    font-size: 16px;
     line-height: 1.4;
     letter-spacing: 4px;
   }
   .service-intro-content p {
     font-size: 16px;
+  }
+}
+
+/* ==========================================================================
+   Contact Page V2 Styles (New Classes to avoid conflicts)
+   ========================================================================== */
+
+.contact-v2-section {
+  position: relative;
+  padding-top: 60px;
+  /* min-height: 800px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.contact-v2-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80vh;
+  z-index: 0;
+}
+
+.contact-v2-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.contact-v2-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(42 75 92 / 60%);
+  z-index: 1;
+}
+
+.contact-v2-container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+.contact-v2-title {
+  font-family: "Syncopate", sans-serif;
+  font-weight: 700;
+  font-size: clamp(1.5rem, 5vw, 40px);
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 12px;
+  line-height: 1.4;
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.contact-v2-card {
+  background: var(--Lightest-Gray---FA);
+  padding: 50px 70px;
+  border-radius: 4px;
+  border: 1px solid var(--Light-Gray---D9);
+  max-width: 57%;
+  margin: 0 auto;
+}
+
+@media (max-width: 991px) {
+  .contact-v2-card {
+    padding: 30px;
+    max-width: 70%;
+  }
+}
+@media (max-width: 767px) {
+  .contact-v2-card {
+    padding: 40px 25px;
+    max-width: 100%;
+  }
+  .contact-v2-section {
+    padding: 80px 0;
+    min-height: auto;
+  }
+  .contact-v2-title {
+    letter-spacing: 6px;
+    font-size: 24px;
+  }
+  .contact-v2-card {
+    padding: 40px 25px;
+  }
+}
+
+/* ==========================================================================
+   Contact Info Section V2 Styles
+   ========================================================================== */
+
+.contact-info-v2 {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding-left: 15%; 
+}
+
+.info-item-v2 {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.info-icon-v2 {
+  /* width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  flex-shrink: 0; */
+  color: var(--Bllue);
+}
+.info-icon-v2 i{
+  font-size: 30px;
+}
+
+.info-text-v2 {
+  font-family: "DM Sans", sans-serif;
+  font-size: 16px;
+  color: #333;
+  line-height: 1.6;
+}
+
+.info-phone-v2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--Bllue);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.info-phone-v2:hover {
+  color: var(--Teal);
+  text-decoration: none;
+}
+
+.google-map-iframe {
+  width: 100%;
+  height: 600px;
+  border: 0;
+  display: block;
+}
+
+@media (max-width: 991px) {
+  .contact-info-v2 {
+    padding-left: 0;
+    margin-bottom: 50px;
+    align-items: center;
+  }
+  .info-item-v2 {
+    width: 100%;
+    max-width: 400px;
+  }
+  .google-map-iframe {
+    height: 400px;
   }
 }
