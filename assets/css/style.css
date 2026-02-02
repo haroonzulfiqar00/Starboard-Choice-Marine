@@ -1567,6 +1567,7 @@ body {
 }
 .moreinfo p a {
   color: var(--Black);
+  text-decoration: underline;
 }
 /* ==========================================================================
    Consolidated Media Queries (Unified Workflow)
