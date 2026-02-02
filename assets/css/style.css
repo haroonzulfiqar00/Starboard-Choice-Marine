@@ -1549,7 +1549,17 @@ body {
 .Starboard-storage-item .services-item-text{
     max-width: 85%;
 }
-
+.left-centsec{
+  text-align: center;
+}
+.left-centsec .about-title{
+  text-align: center;
+  font-family: 'Syncopate';
+  letter-spacing: 9.6px;
+}
+.moreinfo p a{
+  color: var(--Black);
+}
 /* ==========================================================================
    Consolidated Media Queries (Unified Workflow)
    ========================================================================== */
