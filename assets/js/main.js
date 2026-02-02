@@ -192,5 +192,28 @@ $(document).ready(function () {
     }
   });
 
+  if ($(".story-carousel").length) {
+    $(".story-carousel").owlCarousel({
+      center: true,
+      loop: false,
+      margin: 30,
+      nav: false,
+      dots: false,
+      autoWidth: true,
+      autoplay: false,
+      responsive: {
+        0: {
+          items: 1.2,
+          autoWidth: false,
+          margin: 15,
+        },
+        992: {
+          items: 1,
+          autoWidth: true,
+        },
+      },
+    });
+  }
+
   console.log("Starboard Choice Marine Template Initialized!");
 });
