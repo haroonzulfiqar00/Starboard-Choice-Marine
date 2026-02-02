@@ -2150,7 +2150,7 @@ body {
   font-family: Syncopate;
   color: #fff;
   letter-spacing: 9.6px;
-    text-align: center;
+  text-align: center;
 }
 .ourstory-lastcard p {
   color: #fff;
@@ -2161,15 +2161,15 @@ body {
 } */
 
 @media (max-width: 991px) {
-  .story-year{
+  .story-year {
     font-size: 40px;
   }
   .story-year.range {
     font-size: 40px;
-}
-.story-content h4{
-  font-size: 20px;
-}
+  }
+  .story-content h4 {
+    font-size: 20px;
+  }
   .story-card {
     flex-direction: column;
     padding: 20px;
@@ -2180,8 +2180,8 @@ body {
   }
   .story-content {
     flex: none;
-}
-  .story-content h4{
+  }
+  .story-content h4 {
     font-size: 18px;
     letter-spacing: 4px;
   }
@@ -2195,3 +2195,25 @@ body {
     margin-bottom: 0;
   }
 }
+.our-mission-statement .about-content {
+  max-width: 80%;
+  margin: 0 auto;
+  padding-right: 50px;
+  text-align: left !important;
+}
+.our-mission-statement ol {
+  padding-left: 20px;
+}
+.our-mission-statement ol li {
+  margin-bottom: 10px;
+}
+.our-visionsec .about-content-wrapper {
+  border: 1px solid var(--Light-Gray---D9, #d9d9d9);
+  background: var(--Lightest-Gray---FA, #fafafa);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 60px 40px;
+}
+
