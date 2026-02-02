@@ -537,10 +537,6 @@ p {
   text-transform: capitalize;
   letter-spacing: 1px;
   transition: var(--transition);
-  /* display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto; */
   width: fit-content;
 }
 
@@ -850,12 +846,12 @@ body {
 }
 
 .hart-fabrication-section {
-  border-top: 1px solid var(--Lighter-Gray---EE, #EEE);
-  border-bottom: 1px solid var(--Lighter-Gray---EE, #EEE);
-  background: var(--Lightest-Gray---FA, #FAFAFA);
+  border-top: 1px solid var(--Lighter-Gray---EE, #eee);
+  border-bottom: 1px solid var(--Lighter-Gray---EE, #eee);
+  background: var(--Lightest-Gray---FA, #fafafa);
 }
 .hoist-section .left-centsec .about-title {
-    letter-spacing: 4.5px;
+  letter-spacing: 4.5px;
 }
 .service-box {
   position: relative;
@@ -869,7 +865,6 @@ body {
   height: 100%;
   object-fit: cover;
 }
-
 
 .service-overlay {
   position: absolute;
@@ -1456,26 +1451,6 @@ body {
 }
 
 /* Service Intro Section Styles */
-.btn-outline-teal {
-  display: inline-block;
-  padding: 12px 40px;
-  border: 1px solid var(--Teal);
-  color: var(--Teal);
-  font-family: "DM Sans", sans-serif;
-  font-size: 16px;
-  font-weight: 700;
-  text-transform: capitalize;
-  text-decoration: none;
-  background: transparent;
-  border-radius: 4px;
-  transition: var(--transition);
-}
-
-.btn-outline-teal:hover {
-  background-color: var(--Teal);
-  color: var(--White);
-  text-decoration: none;
-}
 
 .service-intro-content p {
   color: var(--Black);
@@ -1500,6 +1475,7 @@ body {
   height: auto;
   object-fit: cover;
   display: block;
+  transition: var(--transition);
 }
 
 .services-item-title {
@@ -1509,6 +1485,22 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
+}
+
+.services-grid-item a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  transition: var(--transition);
+}
+
+.services-grid-item a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+.services-item-title a:hover {
+  color: var(--Bllue);
 }
 
 .services-item-text {
@@ -1596,7 +1588,7 @@ body {
     padding-right: 0px;
   }
   .about-title {
-    font-size: 28px;
+    font-size: 20px;
   }
   .about-img-wrapper img {
     min-height: 400px;
@@ -1700,7 +1692,7 @@ body {
     gap: 10px;
   }
   .btn-global {
-    width: 100%;
+    /* width: 100%; */
     padding: 18px;
   }
   .hero-search {
@@ -2242,5 +2234,18 @@ body {
     align-items: center;
     width: 100%;
     margin-bottom: 10px;
+  }
+  .btn-global {
+    width: 100%;
+  }
+  .btn-outline-global {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .request-form-input {
+    padding: 10px !important;
+    font-size: 14px;
   }
 }
