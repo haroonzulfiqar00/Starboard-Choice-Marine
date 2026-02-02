@@ -289,14 +289,12 @@
   justify-content: center;
   cursor: pointer;
   pointer-events: auto;
-  transition: var(--transition);
   font-size: 14px;
 }
 
 .testimonial-prev:hover,
 .testimonial-next:hover {
-  background-color: var(--Bllue);
-  transform: scale(1.1);
+  background-color: #2a4b5c7c;
 }
 
 .testimonial-slider-wrapper {
@@ -855,6 +853,7 @@ body {
   position: relative;
   overflow: hidden;
   height: 300px;
+  display: block;
 }
 
 .service-box img {
@@ -862,6 +861,7 @@ body {
   height: 100%;
   object-fit: cover;
 }
+
 
 .service-overlay {
   position: absolute;
@@ -2217,3 +2217,22 @@ body {
   padding: 60px 40px;
 }
 
+@media (max-width: 991px) {
+  .our-mission-statement .about-content {
+    max-width: 100%;
+    margin: 0 auto;
+    padding-right: 0;
+    text-align: center;
+  }
+  .left-centsec .about-title {
+    letter-spacing: 3px;
+  }
+}
+@media (max-width: 425px) {
+  .btn-outline-global {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
