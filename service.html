@@ -40,6 +40,239 @@
 
 <body>
 
+    
+    <header class="main-header">
+        <div class="container-fluid px-xl-5">
+            <div class="header-wrapper">
+                <div class="logo-area">
+                    <a href="index.html">
+                        <img src="/assets/images/home/starboard-logo.png" alt="Starboard Choice Marine Logo"
+                            class="main-logo">
+                    </a>
+                </div>
+
+                <nav class="desktop-nav d-none d-lg-block">
+                    <ul class="nav-links">
+                        <li class="has-mega"><a href="javascript:void(0)" class="mega-trigger"
+                                data-target="#nebu-inv">Inventory</a></li>
+                        <li><a href="financing.html">Financing</a></li>
+                        <li><a href="docks.html">Docks & Lifts</a></li>
+                        <li class="has-mega"><a href="javascript:void(0)" class="mega-trigger"
+                                data-target="#menu-service">Service</a></li>
+                    </ul>
+                </nav>
+
+                <div class="header-right">
+                    <div class="contact-info d-none d-md-flex">
+                        <span class="label">Call or Text</span>
+                        <a href="tel:2694144351" class="phone-link">(269) 414-4351</a>
+                    </div>
+                    <div class="company-toggle" id="company-btn">
+                        <span class="d-none d-md-block">Company</span>
+                        <div class="hamburger">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Inventory Mega Menu -->
+        <div id="nebu-inv" class="mega-menu">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <ul class="mega-list">
+                            <li><a href="#">All Inventory</a></li>
+                            <li><a href="#">New Boats</a></li>
+                            <li><a href="#">Pre-Owned Boats</a></li>
+                            <li><a href="#">Factory Promotions</a></li>
+                            <li class="mt-4"><a href="trade.html">Get Your Trade Value</a></li>
+                            <li><a href="financing.html">Get Financing</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="row no-gutters boat-images">
+                            <div class="col-md-4">
+                                <div class="boat-card">
+                                    <img src="./assets/images/home/tahoe.png" alt="Tahoe">
+                                    <div class="boat-title"><img src="./assets/images/home/mclogo.png" alt="mclogo2">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="boat-card">
+                                    <img src="./assets/images/home/mirrocraft.png" alt="MirroCraft">
+                                    <div class="boat-title"><img src="./assets/images/home/Cobalt_Logo-white 1.png"
+                                            alt="mclogo2"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="boat-card">
+                                    <img src="./assets/images/home/bayview.png" alt="Bayview">
+                                    <div class="boat-title"><img src="./assets/images/home/mclogo2.png" alt="mclogo2">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2">
+                        <div class="brand-logos">
+                            <img src="./assets/images/home/evinrude-Logo.png" alt="Evinrude">
+                            <img src="./assets/images/home/honda-Logo.png" alt="Honda Marine">
+                            <img src="./assets/images/home/mercury-Logo.png" alt="Mercury">
+                            <img src="./assets/images/home/suzuki-Logo.png" alt="Suzuki Marine">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Service Mega Menu -->
+        <div id="menu-service" class="mega-menu">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-4">
+                        <a href="service.html" class="service-box">
+                            <img src="./assets/images/home/service-centermega.png" alt="Service Center">
+                            <div class="service-overlay">
+                                <h3>SERVICE CENTER</h3>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="storage.html" class="service-box">
+                            <img src="./assets/images/home/storage-mega.png" alt="Storage">
+                            <div class="service-overlay">
+                                <h3>STORAGE</h3>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="parts.html" class="service-box">
+                            <img src="./assets/images/home/parts-mega.png" alt="Parts">
+                            <div class="service-overlay">
+                                <h3>PARTS</h3>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Mega Menu Sidebar -->
+    <div id="mobile-nav" class="company-sidebar">
+        <div class="sidebar-header d-flex align-items-center justify-content-between p-4 border-bottom">
+            <div class="sidebar-logo">
+                <img src="/assets/images/home/starboard-logo.png" alt="Logo" style="height: 40px;">
+            </div>
+            <button class="close-sidebar" style="position: static; font-size: 30px;">&times;</button>
+        </div>
+
+        <div class="sidebar-content p-4">
+            <!-- Mobile Navigation Accordions/Links -->
+            <div class="mobile-nav-wrapper">
+                <!-- Inventory Accordion -->
+                <div class="mobile-nav-item border-bottom">
+                    <div class="accordion-header py-3" data-target="#mobile-inv">
+                        INVENTORY <i class="fa-solid fa-plus"></i>
+                    </div>
+                    <div id="mobile-inv" class="accordion-body pb-3" style="display: none;">
+                        <ul class="list-unstyled pl-3">
+                            <li class="py-2"><a href="#" class="text-teal">All Inventory</a></li>
+                            <li class="py-2"><a href="#" class="text-teal">New Boats</a></li>
+                            <li class="py-2"><a href="#" class="text-teal">Pre-Owned Boats</a></li>
+                            <li class="py-2"><a href="#" class="text-teal">Factory Promotions</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Static Links -->
+                <div class="mobile-nav-item border-bottom">
+                    <a href="financing.html" class="d-block py-3 text-teal font-weight-bold">FINANCING</a>
+                </div>
+                <div class="mobile-nav-item border-bottom">
+                    <a href="docks.html" class="d-block py-3 text-teal font-weight-bold">DOCKS & LIFTS</a>
+                </div>
+
+                <!-- Service Accordion -->
+                <div class="mobile-nav-item border-bottom">
+                    <div class="accordion-header py-3" data-target="#mobile-service">
+                        SERVICE <i class="fa-solid fa-plus"></i>
+                    </div>
+                    <div id="mobile-service" class="accordion-body pb-3" style="display: none;">
+                        <ul class="list-unstyled pl-3">
+                            <li class="py-2"><a href="service.html" class="text-teal">Service Center</a></li>
+                            <li class="py-2"><a href="storage.html" class="text-teal">Storage</a></li>
+                            <li class="py-2"><a href="parts.html" class="text-teal">Parts</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Company Accordion -->
+                <div class="mobile-nav-item border-bottom">
+                    <div class="accordion-header py-3" data-target="#mobile-company">
+                        COMPANY <i class="fa-solid fa-plus"></i>
+                    </div>
+                    <div id="mobile-company" class="accordion-body pb-3" style="display: none;">
+                        <ul class="list-unstyled pl-3">
+                            <li class="py-2"><a href="about.html" class="text-teal">About Us</a></li>
+                            <li class="py-2"><a href="mission-statement.html" class="text-teal">Mission Statement</a></li>
+                            <li class="py-2"><a href="gold-star-membership.html" class="text-teal">Gold Star Membership</a></li>
+                            <li class="py-2"><a href="events-promos.html" class="text-teal">Events & Promos</a></li>
+                            <li class="py-2"><a href="news-articles.html" class="text-teal">News & Articles</a></li>
+                            <li class="py-2"><a href="meet-our-crew.html" class="text-teal">Meet Our Crew</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar Socials & Contact -->
+            <div class="sidebar-footer mt-5 pt-4 border-top">
+                <div class="d-flex flex-column mb-4">
+                    <span class="small text-muted mb-1">CALL OR TEXT</span>
+                    <a href="tel:2694144351" class="h4 font-weight-bold text-blue">(269) 414-4351</a>
+                </div>
+                <div class="sidebar-socials d-flex justify-content-start gap-3">
+                    <a href="#" class="mr-3"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="mr-3"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Desktop Company Sidebar -->
+    <div id="menu-company" class="company-sidebar d-none d-lg-block">
+        <div class="sidebar-header">
+            <button class="close-sidebar">&times;</button>
+        </div>
+        <div class="sidebar-content">
+            <ul class="main-sidebar-nav">
+                <li><a href="about.html">ABOUT US</a></li>
+                <li><a href="mission-statement.html">MISSION STATEMENT</a></li>
+                <li><a href="gold-star-membership.html">GOLD STAR MEMBERSHIP</a></li>
+                <li><a href="events-promos.html">EVENTS & PROMOS</a></li>
+            </ul>
+            <ul class="sub-sidebar-nav secondary-nav">
+                <li><a href="news-articles.html">News & Articles</a></li>
+                <li><a href="meet-our-crew.html">Meet Our Crew</a></li>
+                <li><a href="employment.html">Employment</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+            <div class="sidebar-socials">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="sidebar-overlay"></div>
+
+
     <main>
         <!-- Hero Banner Section Start -->
         <section class="common-hero">
