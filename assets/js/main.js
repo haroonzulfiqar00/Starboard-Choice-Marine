@@ -134,7 +134,8 @@ $(document).ready(function () {
     if ($(window).width() < 992) {
       // Mobile: Toggle full nav
       $("#mobile-nav, .sidebar-overlay").toggleClass("active");
-    } else {
+    } 
+    else {
       // Desktop: Toggle company sidebar
       $("#menu-company, .sidebar-overlay").toggleClass("active");
     }
