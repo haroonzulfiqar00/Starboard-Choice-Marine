@@ -16,6 +16,38 @@ $(document).ready(function () {
     });
   }
 
+  if ($(".inventory-carousel").length) {
+    $(".inventory-carousel").owlCarousel({
+      loop: true,
+      margin: 20,
+      nav: false,
+      dots: false,
+      autoplay: false,
+      autoplayTimeout: 4000,
+      smartSpeed: 800,
+      navText: [
+        '<i class="fa-solid fa-chevron-left"></i>',
+        '<i class="fa-solid fa-chevron-right"></i>',
+      ],
+      responsive: {
+        0: {
+          items: 1,
+          nav: false,
+          dots: false,
+        },
+        576: {
+          items: 2,
+        },
+        992: {
+          items: 3,
+        },
+        1200: {
+          items: 4,
+        },
+      },
+    });
+  }
+
   if ($(".testimonial-carousel").length) {
     var testimonialOwl = $(".testimonial-carousel").owlCarousel({
       loop: true,
@@ -134,8 +166,7 @@ $(document).ready(function () {
     if ($(window).width() < 992) {
       // Mobile: Toggle full nav
       $("#mobile-nav, .sidebar-overlay").toggleClass("active");
-    } 
-    else {
+    } else {
       // Desktop: Toggle company sidebar
       $("#menu-company, .sidebar-overlay").toggleClass("active");
     }
@@ -167,7 +198,7 @@ $(document).ready(function () {
   });
 
   // Show More / Less for Service Item Text
-  $(".services-grid-item").each(function () {
+  $(".specials-section .services-grid-item").each(function () {
     var $text = $(this).find(".services-item-text").last();
 
     // Add collapsed class and check if it overflows
